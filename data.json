@@ -13,13 +13,13 @@ let taskList=`[
 },
  {
         "title":"Family Time",
-        "description":"Go out for dinner with  the family",
+        "description":"Spend quality time with family",
         "importance":0,
         "image":"images/family.jpeg"
 },
  {
         "title":"Shopping",
-        "description":"The winter is almost here and we don´t have winter clothes",
+        "description":"Buy winter clothes",
         "importance":0,
         "image":"images/shopping.jpeg"
 },
@@ -30,10 +30,22 @@ let taskList=`[
         "image":"images/relax.jpeg"
 },
  {
-        "title":"Run",
-        "description":"Go for a run to keep your body fit",
+        "title":"Dinner",
+        "description":"Prepare dinner for the family",
+        "importance":0,
+        "image":"images/family.jpeg"
+},
+  {
+        "title":"Exercise",
+        "description":"Go for a walk",
         "importance":0,
         "image":"images/run.jpeg"
+},
+ {
+        "title":"Make Notes",
+        "description":"Make notes of today´s lesson",
+        "importance":0,
+        "image":"images/study.jpeg"
 }
 
 ]`;

@@ -20,12 +20,26 @@ updateHtml();
 let buttons = document.getElementsByClassName("click");
 let priority = document.getElementsByClassName("priority");
 let color = document.getElementsByClassName("color");
+function initColor() {
+  for (let i = 0; i < color.length; i++) {
+    if (tasks[i].importance <= 0) {
+      color[i].classList.add(`bg-success`);
+    } else if (tasks[i].importance >= 2 && tasks[i].importance <= 3) {
+      color[i].classList.add(`bg-warning`);
+    } else {
+      color[i].classList.add(`bg-danger`);
+    }
+  }
+}
+
+initColor();
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function () {
     if (tasks[i].importance != 5) {
       tasks[i].importance++;
       priority[i].innerHTML = tasks[i].importance;
+
       colors(i);
     }
   };
@@ -43,10 +57,12 @@ function colors(i) {
 document.getElementById("sort").onclick = sort;
 
 function sort() {
-  tasks.sort((a, b) => b.importance - a.importance);
+  tasks.sort((a, b) => a.importance - b.importance);
 
   info.innerHTML = "";
   updateHtml();
+  initColor();
+
   document.getElementById(
     "sorted"
   ).innerHTML = `Your tasks have been sorted by priority level!`;
@@ -55,7 +71,7 @@ function sort() {
       if (tasks[i].importance != 5) {
         tasks[i].importance++;
         priority[i].innerHTML = tasks[i].importance;
-        colors(i);
+        // colors(i);
       }
     };
   }
