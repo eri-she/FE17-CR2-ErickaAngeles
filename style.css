@@ -1,0 +1,18 @@
+.header {
+  background-image: url(images/header.jpeg);
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header-text {
+  background-color: rgba(0, 0, 0, 0.478);
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  padding: 10px;
+}
