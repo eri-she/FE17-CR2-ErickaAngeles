@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   position: relative;
 }
+
 .header-text {
   background-color: rgba(0, 0, 0, 0.478);
   color: white;
@@ -13,6 +14,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
   padding: 10px;
+}
+
+.container {
+  margin-top: 30px;
+}
+.row {
+  margin-left: 10px;
 }
