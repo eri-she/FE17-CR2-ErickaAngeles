@@ -8,7 +8,20 @@ for (let t of tasks) {
   <div class="card-body">
     <h5 class="card-title">${t.title}</h5>
     <p class="card-text">${t.description}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text ">⚠︎ Priority level:<span class="priority">  ${t.importance}</span></p>
+    <button href="#" class="btn btn-primary">Priority</button>
   </div>
 </div>`;
+}
+
+let buttons = document.getElementsByClassName("btn");
+let priority = document.getElementsByClassName("priority");
+console.log(priority);
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    tasks[i].importance++;
+    document.getElementsByClassName("priority")[i].innerHTML =
+      tasks[i].importance;
+  };
 }

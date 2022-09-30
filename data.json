@@ -1,32 +1,38 @@
 let taskList=`[
     {
-       "title":"book1",
+       "title":"Clean",
        "description":"Clean the house",
+       "importance":0,
         "image":"images/cleaning.jpeg"
 },
  {
         "title":"Study",
         "description":"Study for your code review",
+        "importance":0,
         "image":"images/study.jpeg"
 },
  {
         "title":"Family Time",
         "description":"Go out for dinner with  the family",
+        "importance":0,
         "image":"images/family.jpeg"
 },
  {
         "title":"Shopping",
         "description":"The winter is almost here and we don´t have winter clothes",
+        "importance":0,
         "image":"images/shopping.jpeg"
 },
  {
         "title":"Relax",
         "description":"Meditate to relax",
+        "importance":0,
         "image":"images/relax.jpeg"
 },
  {
         "title":"Run",
         "description":"Go for a run to keep your body fit",
+        "importance":0,
         "image":"images/run.jpeg"
 }
 
