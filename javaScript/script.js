@@ -47,6 +47,9 @@ function sort() {
 
   info.innerHTML = "";
   updateHtml();
+  document.getElementById(
+    "sorted"
+  ).innerHTML = `Your tasks have been sorted by priority level!`;
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function () {
       if (tasks[i].importance != 5) {
