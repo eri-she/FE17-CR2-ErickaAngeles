@@ -39,3 +39,12 @@ footer {
 .copyright {
   text-align: center;
 }
+
+@media (max-width: 576px) {
+  .instructions {
+    text-align: center;
+  }
+  .btn-info {
+    margin-left: 0px;
+  }
+}
