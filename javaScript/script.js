@@ -21,6 +21,7 @@ let buttons = document.getElementsByClassName("click");
 let priority = document.getElementsByClassName("priority");
 let color = document.getElementsByClassName("color");
 
+// added color using the bootstrap classes.
 function initColor() {
   for (let i = 0; i < color.length; i++) {
     if (tasks[i].importance <= 1) {
@@ -38,6 +39,7 @@ addEvent();
 function addEvent() {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = function () {
+      // we limit the priority level to 5
       if (tasks[i].importance != 5) {
         tasks[i].importance++;
         priority[i].innerHTML = tasks[i].importance;
@@ -47,14 +49,19 @@ function addEvent() {
   }
 }
 
+// We add a click event to the "sort button"
 document.getElementById("sort").onclick = sort;
 
 function sort() {
-  tasks.sort((a, b) => a.importance - b.importance);
-
+  // We sort the tasks by importance-attribute.
+  tasks.sort((a, b) => b.importance - a.importance);
+  // we empty the browser so the new information doesn´t appear below the one that is already there.
   info.innerHTML = "";
+  // we update the information displayed in the browser with the new order.
   updateHtml();
+  // apply the coloring condition.
   initColor();
+  // text that inform us that the tasks have been sorted.
   document.getElementById(
     "sorted"
   ).innerHTML = `Your tasks have been sorted by priority level!`;
