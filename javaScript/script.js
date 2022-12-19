@@ -11,7 +11,7 @@ function updateHtml() {
     <p class="card-text">${t.description}</p>
     <p class="card-text color">⚠︎ Priority level:<span class="priority">  ${t.importance}</span></p>
     <button href="#" class="btn btn-primary click">Priority</button>
-    <button href="#" class="btn btn-primary less">Reduce</button>
+   
   </div>
 </div>`;
   }
@@ -37,7 +37,6 @@ function initColor() {
 
 initColor();
 addEvent();
-reduce();
 
 function addEvent() {
   for (let i = 0; i < buttons.length; i++) {
@@ -46,18 +45,6 @@ function addEvent() {
       if (tasks[i].importance != 5) {
         tasks[i].importance++;
         priority[i].innerHTML = tasks[i].importance;
-        initColor();
-      }
-    };
-  }
-}
-function reduce() {
-  for (let i = 0; i < decreasebtn.length; i++) {
-    decreasebtn[i].onclick = function () {
-      if (tasks[i].importance != 0) {
-        tasks[i].importance--;
-        priority[i].innerHTML = tasks[i].importance;
-
         initColor();
       }
     };
