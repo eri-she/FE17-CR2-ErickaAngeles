@@ -68,5 +68,4 @@ function sort() {
     "sorted"
   ).innerHTML = `Your tasks have been sorted by priority level!`;
   addEvent();
-  reduce();
 }
